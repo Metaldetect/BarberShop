@@ -255,7 +255,7 @@ img {
   .hero-photo {
     min-height: 580px;
     background-color: rgb(20, 20, 20);
-    background-image: url("../images/hero/mobile/hero-bg-mob-1x.webp");
+    background-image: url("../images/hero/mobile/hero-bg-mob-1-1x.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -266,7 +266,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-photo {
-    background-image: url("../images/hero/mobile/hero-bg-mob-2x.webp");
+    background-image: url("../images/hero/mobile/hero-bg-mob-1-2x.webp");
   }
 }
 
@@ -279,7 +279,7 @@ img {
   .hero-photo {
     min-height: 680px;
     background-color: #ffffff;
-    background-image: url("../images/hero/tablet/hero-bg-tab-1x.webp");
+    background-image: url("../images/hero/tablet/hero-bg-tab-1-1x.webp");
     background-size: 80%;
     background-position-x: right;
   }
@@ -289,13 +289,13 @@ img {
   screen and (min-width: 768px) and (min-resolution: 192dpi),
   screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-photo {
-    background-image: url("../images/hero/tablet/hero-bg-tab-2x.webp");
+    background-image: url("../images/hero/tablet/hero-bg-tab-1-2x.webp");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-photo {
     background-size: 90%;
-    background-image: url("../images/hero/desktop/hero-bg-des-1x.webp");
+    background-image: url("../images/hero/desktop/hero-bg-des-1-1x.webp");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
@@ -303,7 +303,7 @@ img {
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-photo {
-    background-image: url("../images/hero/desktop/hero-bg-des-2x.webp");
+    background-image: url("../images/hero/desktop/hero-bg-des-1-2x.webp");
   }
 }
 @media (min-width: 768px) {
