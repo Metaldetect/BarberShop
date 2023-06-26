@@ -11,6 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -820,41 +828,40 @@
         </svg>
       </button>
 
-  
-        <div class="modal-menu js-menu-container">
-          <button class="modal-btn-close js-close-menu">
-            <svg class="modal-btn-close-icon">
-              <use href="./images/svg/sprite-min.svg#icon-close"></use>
-            </svg>
-          </button>
-          <nav class="header-mobile-nav">
-            <ul class="header-mobile-nav-list">
-              <li class="header-mobile-nav-item">
-                <a href="#about-section">Про нас</a>
-              </li>
-              <li class="header-mobile-nav-item">
-                <a href="#services-section">Сервіс та ціни</a>
-              </li>
-              <li class="header-mobile-nav-item">
-                <a href="#barbers-section">Майстри</a>
-              </li>
-              <li class="header-mobile-nav-item">
-                <a href="#contact-section">Контакт з нами</a>
-              </li>
-            </ul>
-          </nav>
-          <a class="header-mobile-nav-tel" href="tel:+380441111111"
-            >+38 044 111 11 11</a
-          >
-          <button class="header-mobile-nav-btn" id="form-btn-4" type="button">
-            онлайн-запис
-          </button>
-          <ul class="hero-mobile-social-list">
-            <li class="hero-mobile-social-item"><a href="">Instagram</a></li>
-            <li class="hero-mobile-social-item"><a href="">Youtube</a></li>
+      <div class="modal-menu js-menu-container">
+        <button class="modal-btn-close js-close-menu">
+          <svg class="modal-btn-close-icon">
+            <use href="./images/svg/sprite-min.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="header-mobile-nav">
+          <ul class="header-mobile-nav-list">
+            <li class="header-mobile-nav-item">
+              <a href="#about-section">Про нас</a>
+            </li>
+            <li class="header-mobile-nav-item">
+              <a href="#services-section">Сервіс та ціни</a>
+            </li>
+            <li class="header-mobile-nav-item">
+              <a href="#barbers-section">Майстри</a>
+            </li>
+            <li class="header-mobile-nav-item">
+              <a href="#contact-section">Контакт з нами</a>
+            </li>
           </ul>
-        </div>
-    
+        </nav>
+        <a class="header-mobile-nav-tel" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
+        <button class="header-mobile-nav-btn" id="form-btn-4" type="button">
+          онлайн-запис
+        </button>
+        <ul class="hero-mobile-social-list">
+          <li class="hero-mobile-social-item"><a href="">Instagram</a></li>
+          <li class="hero-mobile-social-item"><a href="">Youtube</a></li>
+        </ul>
+      </div>
+
       <div id="backdrop" class="overlay backdrop is-hidden"></div>
     </main>
     <footer class="footer container">
@@ -878,5 +885,6 @@
     <button class="to-top-btn" id="to-top-btn">To Top</button>
     <script src="./js/modal.js"></script>
     <script src="./js/totop.js"></script>
+    <script src="./js/swiper.js"></script>
   </body>
 </html>
