@@ -1,51 +1,54 @@
-(() => {
-  const backdrop = document.getElementById("backdrop");
-  const mobileMenu = document.querySelector(".js-menu-container");
-  const openMenuBtn = document.querySelector(".js-open-menu");
-  const closeMenuBtn = document.querySelector(".js-close-menu");
-  const button = document.getElementById("form-btn");
-  const form = document.getElementById("form");
-  const menuLinks = document.querySelectorAll(".header-mobile-nav-item a");
+const backdropEl = document.getElementById("backdrop");
+const menuContainer = document.querySelector(".js-menu-container");
+const openMenuBtn = document.querySelector(".js-open-menu");
+const closeMenuBtn = document.querySelector(".js-close-menu");
+const formButton = document.getElementById("form-btn");
+const form = document.getElementById("form");
+const menuLinks = document.querySelectorAll(".header-mobile-nav-item a");
 
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute("aria-expanded") === "true" || false;
-    openMenuBtn.setAttribute("aria-expanded", !isMenuOpen);
-    mobileMenu.classList.toggle("is-open");
-    backdrop.classList.toggle("active");
-  };
+let isMenuOpen = false;
 
-  openMenuBtn.addEventListener("click", toggleMenu);
-  closeMenuBtn.addEventListener("click", toggleMenu);
+const toggleMenu = () => {
+  isMenuOpen = !isMenuOpen;
+  openMenuBtn.setAttribute("aria-expanded", isMenuOpen);
+  menuContainer.classList.toggle("is-open");
+  backdropEl.classList.toggle("active");
+};
 
-  button.addEventListener("click", function () {
-    form.scrollIntoView({ behavior: "smooth" });
-  });
+openMenuBtn.addEventListener("click", toggleMenu);
+closeMenuBtn.addEventListener("click", toggleMenu);
 
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+formButton.addEventListener("click", () => {
+  form.scrollIntoView({ behavior: "smooth" });
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (isMenuOpen) {
       toggleMenu();
-    });
+    }
   });
+});
 
-  const anotherButton1 = document.getElementById("form-btn-1");
-  anotherButton1.addEventListener("click", function () {
-    form.scrollIntoView({ behavior: "smooth" });
-  });
+const scrollToForm = () => {
+  form.scrollIntoView({ behavior: "smooth" });
+};
 
-  const anotherButton2 = document.getElementById("form-btn-2");
-  anotherButton2.addEventListener("click", function () {
-    form.scrollIntoView({ behavior: "smooth" });
-  });
-
-  const anotherButton3 = document.getElementById("form-btn-3");
-  anotherButton3.addEventListener("click", function () {
-    form.scrollIntoView({ behavior: "smooth" });
-  });
-
-  const anotherButton4 = document.getElementById("form-btn-4");
-  anotherButton4.addEventListener("click", function () {
-    form.scrollIntoView({ behavior: "smooth" });
+const closeMenuAndScrollToForm = () => {
+  if (isMenuOpen) {
     toggleMenu();
-  });
-})();
+  }
+  scrollToForm();
+};
+
+const anotherButton1 = document.getElementById("form-btn-1");
+anotherButton1.addEventListener("click", closeMenuAndScrollToForm);
+
+const anotherButton2 = document.getElementById("form-btn-2");
+anotherButton2.addEventListener("click", closeMenuAndScrollToForm);
+
+const anotherButton3 = document.getElementById("form-btn-3");
+anotherButton3.addEventListener("click", closeMenuAndScrollToForm);
+
+const anotherButton4 = document.getElementById("form-btn-4");
+anotherButton4.addEventListener("click", closeMenuAndScrollToForm);
