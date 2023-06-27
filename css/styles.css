@@ -1204,6 +1204,7 @@ label {
   }
   .portfolio-section-list {
     gap: 30px;
+    flex-wrap: nowrap;
   }
   .portfolio-section-title {
     margin-left: 85px;
@@ -1608,4 +1609,3 @@ label {
 .to-top-btn:hover {
   background-color: transparent;
 }
-
