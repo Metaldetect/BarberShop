@@ -5,6 +5,7 @@
   const closeMenuBtn = document.querySelector(".js-close-menu");
   const button = document.getElementById("form-btn");
   const form = document.getElementById("form");
+  const menuLinks = document.querySelectorAll(".header-mobile-nav-item a");
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -19,6 +20,12 @@
 
   button.addEventListener("click", function () {
     form.scrollIntoView({ behavior: "smooth" });
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      toggleMenu();
+    });
   });
 
   const anotherButton1 = document.getElementById("form-btn-1");
